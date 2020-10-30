@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Shops list</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Flexbox Card Design</title>
+    <link rel="stylesheet" href="Flexcards-master/style.css">
+</head>
+
+<body>
+    <div class="container">
+<main class="grid">
+    
+
+<% shops.forEach(element => { %>
+    
+    <article>
+      
+        <div class="text">
+            <h3><%=element.shopname%></h3>
+            <img src="<%=element.images%>" alt="">
+
+           
+            <p><%=element.address%></p>
+          
+    <form action="/maps" action="POST" >
+        <input type="hidden" name='latitude' value="<%=element.coordinates[0]%>" >
+        <input type="hidden" name="longitude" id=""  value="<%=element.coordinates[1]%>" >
+            <button type="submit" >shop here</button>
+        
+        
+        </form>
+        </div>
+    </article>
+ <%});%>
+
+</main>
+</div>
+</body>
+
+</html>

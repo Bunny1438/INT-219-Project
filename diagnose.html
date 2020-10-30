@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MedHub</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <div class="site-wrap">
+
+    <div class="site-navbar py-2" style="background-color: rgb(135,186,207);">
+
+      <div class="search-wrap" style="background-color: rgb(135,186,207);box-shadow: 2px 5px 20px rgb(95,162,190)">
+        <div class="container" style="background-color: transparent;">
+
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter..." id="speechToText">
+          </form>
+          <button onclick="record()" class="js-search-open" style="margin-top: 2.5%;margin-left:103.5%;"> <i
+              class="fa fa-microphone" style="font-size: 18px;"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="index.html" class="js-logo-clone">Pharma</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li ><a href="index.html">Home</a></li>
+                <li><a href="shop-single2.html">Store</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li class="active"><a href="diagnose.html">Diagnose</a></li>
+              
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="icons">
+            <a href="cart.html" class="icons-btn d-inline-block bag">
+              <span class="icon-shopping-bag"></span>
+              <span class="number">2</span>
+            </a>
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
+                class="icon-menu"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0">
+            <a href="index.html">Home</a> <span class="mx-2 mb-0">/</span>
+            <strong class="text-black">Diagnose</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-blocks-cover" style="">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 mx-auto order-lg-2 align-self-center">
+            <div class="site-block-cover-content text-center" style="margin-top: -130px;">
+              <br><h2 style="margin-left: -118%;font-size: 30px;margin-top: -120px; "> <span style="font-size: 45px;">Get</span>
+                Preventions <br>
+              </h2>
+              <h2 style="margin-left: -82%;font-size: 30px;color: ">And Beneficial Suggestions</h2>
+              <br><br>
+
+
+              <label class="" style="margin-left: -92.5%;font-size: 20px;">Symptom 1&nbsp; &nbsp; &nbsp;</label>
+              <select id="smp1" class="dropbtn"
+                style="border-radius: 40px;padding-left: 110px;background-color: transparent;padding-right:110px;padding-top: 10px;padding-bottom: 10px;font-size:20px;border: 1px solid #51eaea; ">
+                <option value="None" class="dropdown-content" selected>-- Select --</option>
+                <option value="ID0011">Shivering</option>
+                <option value="ID0012">High fever</option>
+                <option value="ID0013">Cough</option>
+                <option value="ID0014">Low Fever</option>
+                <option value="ID0015">chest Pain</option>
+                <option value="ID0016">Stubborn Cough</option>
+                <option value="ID0017">Persistent Cough </option>
+
+
+                <option value="NONE1">None</option>
+              </select>
+              <br>
+              <br>
+              <label class="" style="margin-left: -92.5%;font-size: 20px;">Symptom 2&nbsp; &nbsp; &nbsp;</label>
+              <select id="smp2" class="dropbtn"
+                style="border-radius: 40px;padding-left: 110px;padding-right:110px;padding-top: 10px;padding-bottom: 10px;font-size:20px;border: 1px solid #51eaea;background-color: transparent; ">
+                <option value="None" class="dropdown-content" selected>-- Select --</option>
+                <option value="ID0021">Chills</option>
+                <option value="ID0022">Nausea</option>
+                <option value="ID0023">Stuffy Nose</option>
+                <option value="ID0025">chest Pressure</option>
+                <option value="ID0026">Breathing Noisily</option>
+                <option value="ID0027">Constant Fatigue </option>
+
+                <option value="NONE2">None</option>
+              </select>
+              <br>
+              <br>
+
+              <label class="" style="margin-left: -92.5%;font-size: 20px;">Symptom 3&nbsp; &nbsp; &nbsp;</label>
+              <select id="smp3" class="dropbtn"
+                style="border-radius: 40px;padding-left: 110px;padding-right:110px;padding-top: 10px;padding-bottom: 10px;font-size:20px;border: 1px solid #51eaea;background-color: transparent; ">
+                <option value="None" class="dropdown-content" selected>-- Select --</option>
+                <option value="ID0031">Headache</option>
+                <option value="ID0032">Vomiting</option>
+                <option value="ID0033">fatigue</option>
+                <option value="ID0035">Chest Discomfort</option>
+                <option value="ID0036">Chest Pain</option>
+                <option value="ID0037">Weight Loss </option>
+
+                <option value="NONE3">None</option>
+              </select>
+              <br>
+              <br>
+
+              <label class="" style="margin-left: -90%;font-size: 20px;">Symptom 4&nbsp; &nbsp; &nbsp;</label>
+              <select id="smp4" class="dropbtn"
+                style="border-radius: 40px;padding-left: 110px;padding-right:100px;padding-top: 10px;padding-bottom: 10px;font-size:20px;border: 1px solid#51eaea;background-color: transparent; ">
+                <option value="None" class="dropdown-content" selected>-- Select --</option>
+                <option value="ID0041">Sweating</option>
+                <option value="ID0042">Congestion</option>
+                <option value="ID0045">Shortness of breath</option>
+                <option value="ID0046">Chronic Mucus</option>
+                <option value="ID0047">Loss of appetite </option>
+
+
+                <option value="NONE4">None</option>
+              </select>
+              <br>
+              <br>
+              <label class="" style="margin-left: -90%;font-size: 20px;">Symptom 5&nbsp; &nbsp; &nbsp;</label>
+              <select id="smp5" class="dropbtn"
+                style="border-radius: 40px;padding-left: 118px;padding-right:113px;padding-top: 10px;padding-bottom: 10px;font-size:20px;border: 1px solid #51eaea;background-color: transparent; ">
+                <option value="None" class="dropdown-content" selected>-- Select --</option>
+                <option value="ID0051">Muscle Pain</option>
+                <option value="ID0052">Abdominal Pain</option>
+                <option value="ID0053">Sore throat</option>
+                <option value="ID0055">Weakness</option>
+                <option value="ID0056">chest Pain</option>
+                <option value="ID0057">constant fever </option>
+
+                <option value="NONE5">None of the above</option>
+              </select>
+              <br>
+
+
+              <br>
+              <div style="margin-top: -330px;margin-left: 50%;">
+                <button type="button" onclick="GetSelectedValue()" class=""
+                  style="padding-left:35px;;padding-right:35px;padding-top:7px;padding-bottom:7px;font-size:20px;background-color:#51eaea;border:1.5px solid white;border-radius: 10px;">DIAGNOSE</button>
+
+
+                <h3 style="margin-left:0%;font-size: 25px;">Your Preventions are:</h3>
+                <span id="result"></span><br>
+             
+
+              </div>
+
+              <br />
+              <br />
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section bg-secondary bg-image" style="background-image: url('images/bg_2.jpg');">
+      <div class="container">
+        <div class="row align-items-stretch">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg_1.jpg');">
+              <div class="banner-1-inner align-self-center">
+                <h2>Pharma Products</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg_2.jpg');">
+              <div class="banner-1-inner ml-auto  align-self-center">
+                <h2>Rated by Experts</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+
+            <div class="block-7">
+              <h3 class="footer-heading mb-4">About Us</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates
+                sed dolorum excepturi iure eaque, aut unde.</p>
+            </div>
+
+          </div>
+          <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
+            <!-- <h3 class="footer-heading mb-4">Quick Links</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Supplements</a></li>
+              <li><a href="#">Vitamins</a></li>
+              <li><a href="#">Diet &amp; Nutrition</a></li>
+              <li><a href="#">Tea &amp; Coffee</a></li>
+            </ul> -->
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="block-5 mb-5">
+              <h3 class="footer-heading mb-4">Contact Info</h3>
+              <ul class="list-unstyled">
+                <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
+                <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
+                <li class="email">emailaddress@domain.com</li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <p>
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script> All rights reserved | This template is made
+              with <i class="icon-heart" aria-hidden="true"></i> by <a href="" target="_blank"
+                class="text-primary">FEVER333</a>
+
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/type.js"></script>
+
+
+
+  <script>
+    function GetSelectedValue() {
+      var a = document.getElementById("smp1");
+      var result1 = a.options[a.selectedIndex].value;
+
+      var b = document.getElementById("smp2");
+      var result2 = b.options[b.selectedIndex].value;
+
+      var c = document.getElementById("smp3");
+      var result3 = c.options[c.selectedIndex].value;
+
+      var d = document.getElementById("smp4");
+      var result4 = d.options[d.selectedIndex].value;
+
+      var e = document.getElementById("smp5");
+      var result5 = e.options[e.selectedIndex].value;
+
+
+      var result;
+      var result12;
+      var med;
+
+
+
+      if (result1 == "ID0011" && result2 == "ID0021" && result3 == "ID0031" && result4 == "ID0041" && result5 ==
+        "ID0051") {
+        result = "The Preventions according to your Symptoms are - making sure the room temperature where the person is resting is comfortable, taking regular bath or a sponge bath using lukewarm water and drinking plenty of fluids";
+        document.getElementById("result").innerHTML = result;
+        med = "avil";
+      }
+
+      if (result1 == "ID0012" && result2 == "ID0022" && result3 == "ID0032" && result4 == "ID0041" && result5 ==
+        "ID0052") {
+        result = "You are Diagnosed with Malaria and Medicine you need are:Chloroquine or Doxycycline or Mefloquine.";
+        med = "doxycycline";
+        document.getElementById("result").innerHTML = result;
+      }
+
+      if (result1 == "ID0013" && result2 == "ID0023" && result3 == "ID0031" && result4 == "ID0042" && result5 ==
+        "ID0053") {
+        result = "You are Diagnosed with Cold and Medicine you need are:tylenol or benadryl.";
+        med = "benadryl";
+        document.getElementById("result").innerHTML = result;
+        document.getElementById("medd").value = med;
+      }
+
+
+      if (result1 == "ID0015" && result2 == "ID0025" && result3 == "ID0035" && result4 == "ID0045" && result5 ==
+        "ID0055") {
+        result = "You are Diagnosed with  Cardiovascular Diseases and Medicines you need are:aspirin";
+        med = "aspirin";
+        document.getElementById("result").innerHTML = result;
+        document.getElementById("medd").value = med;
+      }
+      if (result1 == "ID0016" && result2 == "ID0026" && result3 == "ID0036" && result4 == "ID0046" && result5 ==
+        "ID0056") {
+        result = "You are Diagnosed with  Respiratory Disease and medicines you need are: antihistamin ";
+        med = "antihistamin";
+        document.getElementById("result").innerHTML = result;
+        document.getElementById("medd").value = med;
+      }
+      if (result1 == "ID0017" && result2 == "ID0027" && result3 == "ID0037" && result4 == "ID0047" && result5 ==
+        "ID0057") {
+        result = "You are Diagnosed with  Tuberculosis and Medicines you need are: Isoniazid ,rifampicin and pyrazinamide";
+        med = "isoniazid";
+        document.getElementById("result").innerHTML = result;
+        document.getElementById("medd").value = med;
+      }
+
+
+
+
+
+
+    }
+
+
+
+
+  </script>
+
+</body>
+
+</html>
