@@ -90,23 +90,23 @@
           </div>
           <div class="col-md-12">
     
-            <form action="#" method="post">
+            <form action="#" method="post" name="form1" id="contactForm">
     
               <div class="p-3 p-lg-5 border">
                 <div class="form-group row">
                   <div class="col-md-6">
                     <label for="c_fname" class="text-black">First Name <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="c_fname" name="c_fname">
+                    <input type="text" class="form-control" id="c_fname" name="c_fname" required="">
                   </div>
                   <div class="col-md-6">
                     <label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="c_lname" name="c_lname">
+                    <input type="text" class="form-control" id="c_lname" name="c_lname" required="">
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-md-12">
                     <label for="c_email" class="text-black">Email <span class="text-danger">*</span></label>
-                    <input type="email" class="form-control" id="c_email" name="c_email" placeholder="">
+                    <input type="email" class="form-control" id="c_email" name="c_email" placeholder="" required="">
                   </div>
                 </div>
                 <div class="form-group row">
@@ -124,7 +124,7 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-lg-12">
-                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Send Message">
+                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Send Message" onclick="validate()">
                   </div>
                 </div>
               </div>
@@ -217,6 +217,87 @@
       </div>
     </footer>
   </div>
+  <script type="text/javascript">
+  	function validate()
+  		{
+  			var nam = document.getElementById('c_fname').value;
+
+        var namm = document.getElementById("c_lname").value;
+        var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+var inputText = document.getElementById("c_email");
+            if (!isNaN(nam)) {
+    alert("First Name not valid");
+    document.form1.c_fname.focus();
+    return false;
+  } 
+
+
+
+  			if (!isNaN(namm)) {
+    alert("Last Name not valid");
+
+    document.form1.c_lname.focus();
+    return false;
+  } 
+
+if(!inputText.value.match(mailformat))
+{
+
+alert("You have entered an invalid email address!");
+document.form1.c_email.focus();
+return false;
+}
+else
+{
+ return true;
+}
+}
+  	
+  </script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+<script>
+  
+
+var config = {
+    apiKey: "AIzaSyBRTTdqAzsnpDxpPVGSRL__NgURrBCZe8c",
+    authDomain: "my-project2-ccae0.firebaseapp.com",
+    databaseURL: "https://my-project2-ccae0.firebaseio.com",
+    projectId: "my-project2-ccae0",
+    storageBucket: "my-project2-ccae0.appspot.com",
+    messagingSenderId: "277809443589"
+  };
+  firebase.initializeApp(config);
+
+  var messagesRef = firebase.database().ref('MedHub');
+
+document.getElementById('contactForm').addEventListener('submit',submitForm);
+function submitForm(e){
+e.preventDefault();
+var c_fname = document.getElementById('c_fname').value;
+var c_lname = document.getElementById('c_lname').value;
+var c_email = document.getElementById('c_email').value;
+var c_subject = document.getElementById('c_subject').value;
+var c_message = document.getElementById('c_message').value; 
+
+
+ savedata(c_fname,c_lname,c_email,c_subject,c_message);
+}
+function savedata(c_fname,c_lname,c_email,c_subject,c_message){
+var newMessageRef = messagesRef.push();
+newMessageRef.set({
+c_fname: c_fname,
+c_lname: c_lname,
+c_email:c_email,
+c_subject:c_subject,
+c_message:c_message
+
+});
+}
+
+</script>
+
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
